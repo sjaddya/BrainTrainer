@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="com.example.sjaddya.braintrainer.MainActivity">
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/holo_orange_light"
+        android:paddingHorizontal="5dp"
+        android:text="0s"
+        android:textSize="30sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/problemTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/timeTextView"
+        android:layout_alignBottom="@+id/timeTextView"
+        android:layout_centerHorizontal="true"
+        android:text="9+12"
+        android:textSize="30sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/problemTextView"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:text="0/0"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        android:background="@android:color/holo_blue_dark" />
+
+    <LinearLayout
+        android:id="@+id/solutionLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/option1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:onClick="guess"
+                android:paddingHorizontal="40dp"
+                android:paddingVertical="40dp"
+                android:text="32"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/option2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/holo_blue_dark"
+                android:onClick="guess"
+                android:paddingHorizontal="40dp"
+                android:paddingVertical="40dp"
+                android:text="42"
+                android:textSize="50sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/option3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="guess"
+                android:paddingHorizontal="40dp"
+                android:paddingVertical="40dp"
+                android:text="21"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/option4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:onClick="guess"
+                android:paddingHorizontal="40dp"
+                android:paddingVertical="40dp"
+                android:text="29"
+                android:textSize="50sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/scoreDisplayTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/solutionLinearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:text="Your Score : 0/00"
+        android:textSize="30sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/playAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="playAgain"
+        android:text="Play Again"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/holo_red_light"
+        android:onClick="startGame"
+        android:padding="50dp"
+        android:text="GO!!!"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/scoreDisplayTextView"
+        android:layout_alignBottom="@+id/scoreDisplayTextView"
+        android:layout_centerHorizontal="true"
+        android:text="Correct!!!"
+        android:textSize="30sp"
+        android:visibility="invisible" />
+
+    <Spinner
+        android:id="@+id/spinnerTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/playAgain"
+        android:layout_below="@+id/result"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-3dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp" />
+
+    <Spinner
+        android:id="@+id/spinnerOperation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/playAgain"
+        android:layout_alignBottom="@+id/spinnerTime"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-3dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"/>
+
+</RelativeLayout>

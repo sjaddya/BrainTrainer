@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Brain Trainer</string>
+
+    <string-array name="time">
+
+        <item>10 sec</item>
+        <item>15 sec</item>
+        <item>30 sec</item>
+        <item>1 min</item>
+        <item>2 min</item>
+        <item>3 min</item>
+        <item>5 min</item>
+
+    </string-array>
+
+    <string-array name="operation">
+
+        <item>+ (Addition)</item>
+        <item>- (Subtraction)</item>
+        <item>* (Multiplication)</item>
+        <item>/ (Division)</item>
+        <item>% (Remainder)</item>
+
+    </string-array>
+
+</resources>
